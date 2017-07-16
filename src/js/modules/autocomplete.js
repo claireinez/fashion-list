@@ -32,6 +32,19 @@ export default class AutoComplete {
         list.innerHTML = '';
 
         suggestions
+            .sort(
+                // Order suggestions by the index of the query in the item
+                (a, b) => a.toLowerCase().indexOf(query) < b.toLowerCase().indexOf(query)
+                    ? -1
+                    : 1
+            )
+            .map(
+                // Wrap the matching part of the suggestion in an <em> tag
+                suggestion => suggestion.replace(
+                    new RegExp(`(${query})`, 'ig'),
+                    '<em>$1</em>'
+                )
+            )
             .forEach(suggestion => {
                 const listItem = document.createElement('li');
 
