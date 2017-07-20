@@ -1,0 +1,41 @@
+{
+  "rules": {
+    "no-console": 1,
+    "no-unused-vars": [2, { "args": "none" }],
+    "object-curly-spacing": [2, "always"],
+    "semi": [2, "always"],
+    "strict": [2, "global"],
+    "quotes": [2, "single"],
+    "jsx-quotes": [2, "prefer-single"],
+    "arrow-parens": ["warn", "as-needed"],
+    "spaced-comment": ["error", "always", { "exceptions": ["*"] }],
+    "space-before-function-paren": ["error", "never"],
+    "no-tabs": 2,
+    "indent": ["error", 4, { "SwitchCase": 1 }],
+    "eqeqeq": "error",
+    "eol-last": ["error", "always"],
+    "comma-style": ["error", "last"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "comma-dangle": ["error", "never"],
+    "operator-linebreak": ["error", "before"]
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "globals": {
+  "document": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}
